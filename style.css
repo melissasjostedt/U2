@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    background-color: darkred;
+    background-image: url(../U2/houseofvampirediaries.jpeg);
+    
+}
+h1{
+    display: flex;
+    justify-content: center;
+
+}
+
+#filter-by-age{
+    display: grid-template-columns;
+    justify-content: center;
+    
+}
+
+
