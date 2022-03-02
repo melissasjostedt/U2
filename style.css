@@ -1,19 +1,81 @@
 body{
     margin: 0;
-    background-color: darkred;
     background-image: url(../U2/houseofvampirediaries.jpeg);
+    background-position-y: 35%;
     
 }
 h1{
     display: flex;
     justify-content: center;
+    padding-bottom: 20px;
+
+}
+
+#add-character-form{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 100px 60px;
+    padding-left: 20px;
+   padding-bottom: 15px;
+  
 
 }
 
 #filter-by-age{
-    display: grid-template-columns;
     justify-content: center;
     
 }
 
+#filter-by-breed,
+#filter-by-age {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+#filters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#headers{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    background: beige;
+    margin-top: 5px;
+    padding: 5px;
+  
+}
+
+div#characters{
+    background: white;
+    width: 1000px;
+    height: 1000px;
+    padding: 10px;
+   display: grid;
+   grid-template-columns: 4fr;
+
+
+
+}
+
+.character{
+    padding: 10px 10px;
+    
+}
+
+
+.character:nth-child {
+    background: #fffff0;
+
+}
+
+#characters id{
+    display: flex;
+}
