@@ -1,69 +1,77 @@
-body{
-    margin: 0;
-    background-image: url(../U2/houseofvampirediaries.jpeg);
-    background-position-y: 35%;
-    
-}
-h1{
+body {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-image: url(../U2/charactersTVD.jpeg);
+    background-position: top;
+    background-position-y: 100;
+    background-repeat: no-repeat;
+    max-width: 80vw;
+    background-color: black;
+    padding-bottom: 10px;
+  }
+  h1 {
+    text-align: center;
+    background: black;
+    color: #853435;
+  }
+  
+  #add-character-form {
+    margin-top: 300px;  
+    position:center;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
-
-}
-
-#add-character-form{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    flex-direction: 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
-    margin-bottom: 15px;
-   padding-bottom: 15px;
-   border-bottom: 1px black;
+    
+  }
   
-
-}
-
-#filters {
-    display: grid;
+  #filters {
+    margin-top: 5px;  
+    display: flex;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 15px;
     gap: 15px;
+    padding-left: 110px;
     
-}
-
-#filter-by-gender,
-#filter-by-age {
+  }
+  
+  #filter-by-gender,
+  #filter-by-age {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px;
-}
+  }
 
-
-#headers{
-    display: grid;
-    background: beige;
+  
+  #headers {  
     padding: 10px 20px;
-    background: beige;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-#characters{
-    background: white;
+    border-bottom: 1px solid black;
+    background: #853435;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  #characters {
+    background: #853435;
+    color: black;
     padding: 10px;
-}
-
-.character{
+    
+  }
+  
+  .character {
     padding: 10px 10px;
     display: grid;
-    grid-template-columns: repeat (6, 1fr);
-    
-}
-.character div {
-    /* center vertically*/
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .character div {
+    /* Center vertically */
     display: flex;
     align-items: center;
-}
-
-.character:nth-child(odd) {
-    background: #fffff0;
-
-}
+  }
+  
+  .character:nth-child(odd) {
+    background: black;
+    color: #853435;
+  }
+  
