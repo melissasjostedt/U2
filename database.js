@@ -1,60 +1,84 @@
 
 let database= [
+    
     {
     id: 1,
-    actor: "Nina Dobrev",
-    age: 33,
-    role: "Elena Gilbert",
+    name: "Elena Gilbert",
+    age: 18,
+    gender: "Female",
     breed: "Human",
 },
 
 {
     id: 2,
-    actor: "Paul Wesley",
-    age: 39,
-    role: "Stefan Salvatore",
+    name: "Stefan Salvatore",
+    age: 150,
+    gender: "Male",
     breed: "Vampire",
 },
 
 {
    id: 3,
-   actor: "Ian Somerhalder",
-   age: 43,
-   role: "Elena Gilbert",
+   name: "Ian Somerhalder",
+   age: 150,
+   gender: "Male",
    breed: "Vampire",
 },
 
 {
 id: 4,
-actor: "Katerina Graham",
-age: 32,
-role: "Bonnie Bennett",
+name: "Bonnie Bennett",
+age: 18,
+gender: "Female",
 breed: "Witch",
 },
 
 {
 id: 5,
-actor: "Candice King",
-age: 34,
-role: "Caroline Forbes",
+name: "Caroline Forbes",
+age: 18,
+gender: "Female",
 breed: "Human",
 },
 
 {
 id: 6,
-actor: "Michael Trevino",
-age: 37,
-role: "Taylor Lockwood",
-breed: "werewolf",
+name: "Taylor Lockwood",
+age: 18,
+gender: "Male",
+breed: "Werewolf",
+
 },
 
 {
     id: 7,
-    actor: "Zack Roerig",
-    age: 37,
-    role: "Matt Donovan",
+    name: "Matt Donovan",
+    age: 18,
+    gender: "Male",
     breed: "Human",
-}
+},
 
+{   id: 8,
+    name: "Niklaus Mikaelson",
+    age: 1016,
+    gender: "Male",
+    breed: "Original vampire" 
+},
+
+{   id: 9,
+    name: "Rebekah Mikaelson",
+    age: 1000,
+    gender: "Female",
+    breed: "Original vampire",
+    },
+
+  {  id: 10,
+    name: "Elijah Mikaelson",
+    age: 1020,
+    gender: "Male",
+    breed: "Original vampire"
+
+  },
 
 ]
+
