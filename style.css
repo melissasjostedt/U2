@@ -28,10 +28,11 @@ body {
   #filters {
     margin-top: 5px;  
     display: flex;
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 15px;
     gap: 15px;
-    padding-left: 110px;
+   
     
   }
   
@@ -74,4 +75,6 @@ body {
     background: black;
     color: #853435;
   }
+  
+
   
