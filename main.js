@@ -1,6 +1,6 @@
 "use strict";
 //Include the link to your Github Repository here:
-//Link:
+//Link: https://github.com/melissasjostedt/U2
 
 // Adds a new character object and returns it
 function createNewCharacter(name, age, gender, breed) {
@@ -18,9 +18,6 @@ function createNewCharacter(name, age, gender, breed) {
 // Adds a new character to the database
 function addCharacterToDatabase (database, character) {
     database.push(character);
-    if(confirm("Are you sure that you want to add new character to the database?"));
-        renderCharacters;
-
 }
 
 // To remove a character from our database we use this for loop to remove the character with the right id.
@@ -33,18 +30,6 @@ function removeCharacterById(characters, id) {
 
         }
     }
-}
-// Calls characters by their breed ex: vampire
-function getCharactersByBreed(characters, breed) {
-    let charactersByBreed = [];
-
-    for (let character of characters) {
-        if (character.breed.toLowerCase() == breed.toLowerCase()) {
-            charactersByBreed.push(character);
-        }
-    }
-
-    return charactersByBreed;
 }
 
 // calls characters by their gender
@@ -59,14 +44,26 @@ function getCharactersByGender(characters, gender) {
 
     return charactersByGender;
 }
-    
+
+// Calls characters by their breed
+function getCharactersByBreed(characters, breed) {
+    let charactersByBreed = [];
+
+    for (let character of characters) {
+        if (character.breed.toLowerCase() == breed.toLowerCase()) {
+            charactersByBreed.push(character);
+        }
+    }
+
+    return charactersByBreed;
+}
 
 // calls characters by their age 
 function getCharactersByAge(characters, age) {
     let charactersByAge= [];
 
     for (let character of characters)  {
-        if (character.age = age) {
+        if (character.age == age) {
             charactersByAge.push(character);
         }
     }
@@ -161,20 +158,7 @@ function onRemoveCharacterClick(event) {
     }
 } 
 
-// This function help us get the characters name from the id in the database 
-function getCharacterFromId(characters, id) {
-    for (let i = 0; i < characters.length;i++) {
-        let Character = characters [i];
-        if (Character.id == id) {
-          return Character.name; 
-        }
-    }
-}    
-// Uses the global variable `database``
-removeCharacterById(database);
-// Re-render (without the newly deleted character)
-    renderCharacters(database); 
-    
+
  
 // Add "click" event handler to all remove-buttons
 function setRemoveCharacterHandlers() {
@@ -230,78 +214,11 @@ function onShowAllClick() {
 function setFilterCharacterHandlers() {
     let genderForm = document.getElementById("filter-by-gender");
     let ageForm = document.getElementById("filter-by-age");
+    let breedForm = document.getElementById("filter-by-breed");
     let showAll = document.getElementById("show-all");
 
     genderForm.addEventListener("submit", onFilterByGenderSubmit);
-    ageForm.addEventListener("submit", onFilterByAgeSubmit);
-    showAll.addEventListener("click", onShowAllClick);
-}
-
-// Initialize the page
-renderCharacters(database);
-setAddCharacterHandler();
-setFilterCharacterHandlers();
-}
-
-// To get the characters name from the id in the database 
-function getCharacterFromId(characters, id) {
-    for (let i = 0; i < characters.length;i++) {
-        let Character = characters [i];
-        if (Character.id == id) {
-          return Character.name; 
-        }
-    }
-}    
-// Uses the global variable `database``
- removeCharacterById(database);
-// Re-render (without the newly deleted character)
-    renderCharacters(database); 
-    
- 
-// Add "click" event handler to all remove-buttons
-function setRemoveCharacterHandlers() {
-    let buttons = document.querySelectorAll(".character button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", onRemoveCharacterClick);
-    }
-}
-
-// Filter characters by gender
-function onFilterByGenderSubmit(event) {
-    event.preventDefault();
-    // Get the characters by gender
-    // Re-render them
-    let gender = document.getElementById("filter-gender").value;
-    let characters = getCharactersByGender(database, gender);
-    renderCharacters(characters);
-}
-
-function onFilterByAgeSubmit(event) {
-    event.preventDefault();
-// What year?
-    let age = document.getElementById("filter-age").value;
-// Get the artists by year 
-    let characters = getCharactersByAge(database, age);
-// Re-render them 
-    renderCharacters(characters); 
-}
-
-
-// after filtrering of characters, the show all button resets the filters and show all objects again
-function onShowAllClick() {
-    document.getElementById("filter-gender").value = "";
-    document.getElementById("filter-age").value = "";
-    renderCharacters(database);
-}
-
-// Add addEventListener to filter buttons
-function setFilterCharacterHandlers() {
-    let genderForm = document.getElementById("filter-by-gender");
-    let ageForm = document.getElementById("filter-by-age");
-    let showAll = document.getElementById("show-all");
-
-    genderForm.addEventListener("submit", onFilterByGenderSubmit);
+    breedForm.addEventListener("submit", onFilterByBreedSubmit);
     ageForm.addEventListener("submit", onFilterByAgeSubmit);
     showAll.addEventListener("click", onShowAllClick);
 }
